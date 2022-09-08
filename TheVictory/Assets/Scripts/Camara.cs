@@ -1,10 +1,22 @@
+using System;
 using UnityEngine;
 
 public class Camara : MonoBehaviour
 {
+    public Transform _transform;
+    
     [SerializeField] float velocidad;
 
     [SerializeField] private float velRot;
+
+    public Vector3 cambioZoom;// zoom amount 
+    public Vector3 zoomAct; //new zoom
+
+    private void Start()
+    {
+        zoomAct = _transform.localPosition;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -39,5 +51,27 @@ public class Camara : MonoBehaviour
 
         transform.eulerAngles += new Vector3(0, posrot * velRot * Time.deltaTime,0);
 
+        if (Input.GetKey(KeyCode.R))
+        {
+            zoomAct += cambioZoom;
+        }
+        if (Input.GetKey(KeyCode.F))
+        {
+            zoomAct -= cambioZoom;
+        }
+
+        if (zoomAct.y < 0)
+        {
+            zoomAct.y = 0;
+        }
+
+        if (zoomAct.z < 0)
+        {
+            zoomAct.z = 0;
+        }
+        
+        _transform.localPosition = Vector3.Lerp(_transform.localPosition, zoomAct, Time.deltaTime /* velocidad*/);
+        
+        
     }
 }

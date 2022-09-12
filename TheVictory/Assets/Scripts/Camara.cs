@@ -23,16 +23,16 @@ public class Camara : MonoBehaviour
         //movimiento de la camara
         Vector3 dirección = new Vector3(0, 0, 0);
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.D))//A
         {
             dirección.z += 1.0f; 
-        } else if (Input.GetKey(KeyCode.S))
+        } else if (Input.GetKey(KeyCode.A))//D
         {
             dirección.z -= 1.0f;
-        } else if (Input.GetKey(KeyCode.A))
+        } else if (Input.GetKey(KeyCode.W))//S
         {
             dirección.x -= 1.0f;
-        } else if (Input.GetKey(KeyCode.D))
+        } else if (Input.GetKey(KeyCode.S))//W
         {
             dirección.x += 1.0f;
         }
@@ -64,12 +64,19 @@ public class Camara : MonoBehaviour
         {
             zoomAct.y = 0;
         }
+        
+        
+        if (Input.mouseScrollDelta.y != 0)
+        {
+            zoomAct += Input.mouseScrollDelta.y * cambioZoom;
+        }
+
 
         if (zoomAct.z < 0)
         {
             zoomAct.z = 0;
         }
-        
+
         _transform.localPosition = Vector3.Lerp(_transform.localPosition, zoomAct, Time.deltaTime /* velocidad*/);
         
         

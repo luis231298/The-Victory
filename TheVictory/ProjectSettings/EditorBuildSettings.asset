@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuPrincipal.unity
     guid: 4afec5782d149324796165a27d58af28
+  - enabled: 1
+    path: "Assets/Scenes/Configuraci\xF3n.unity"
+    guid: dce624b860289774ea13211417e69036
   m_configObjects: {}

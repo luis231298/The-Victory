@@ -31,6 +31,11 @@ public class Inicio : MonoBehaviour
         SceneManager.LoadScene(escena);
     }
 
+    public void Config(string escena)
+    {
+        SceneManager.LoadScene(escena);
+    }
+
     public void Exit()
     {
     #if UNITY_EDITOR

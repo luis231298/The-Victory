@@ -7,6 +7,8 @@ public class UIManager : MonoBehaviour
 {
     public GameObject HUDPanel;
     public GameObject PausePanel;
+    public GameObject Configpanel;
+    //public GameObject seleccionador; 
 
     private void Start()
     {
@@ -17,6 +19,8 @@ public class UIManager : MonoBehaviour
     {
         HUDPanel.SetActive(false);
         PausePanel.SetActive(false);
+        Configpanel.SetActive(false);
+        //seleccionador.SetActive(false);
     }
 
     public void ShowHud()
@@ -29,5 +33,11 @@ public class UIManager : MonoBehaviour
     {
         ClearPanels();
         PausePanel.SetActive(true);
+    }
+
+    public void ShowConfig()
+    {
+        ClearPanels();
+        Configpanel.SetActive(true);
     }
 }

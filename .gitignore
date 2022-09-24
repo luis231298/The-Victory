@@ -9,6 +9,9 @@ TheVictory/[Bb]uild/
 TheVictory/[Bb]uilds/
 TheVictory/[Ll]ogs/
 TheVictory/[Mm]emoryCaptures/
+TheVictory/[Aa]ssets/[Ss]ITIAN
+TheVictory/[Aa]ssets/[Pp]olybrush Data
+TheVictory/[Aa]ssets/[Tt]extMesh Pro
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta

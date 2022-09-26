@@ -8,11 +8,23 @@ public class UIManager : MonoBehaviour
     public GameObject HUDPanel;
     public GameObject PausePanel;
     public GameObject Configpanel;
-    //public GameObject seleccionador; 
+    public GameObject ActivoPanel;
+    public GameObject DesactivoPanel;
+    
+    public ColeccionableData _coleccionableData; 
+    public const string pathData = "Data/Coleccion";
+    public const string fileName = "coleccion";
+    //private string aux; 
 
     private void Start()
     {
         ShowHud();
+        var dataFound = SaveManager.LoadData<ColeccionableData>(pathData, fileName);
+        if (dataFound != null)
+        {
+            _coleccionableData = dataFound; 
+            Debug.Log(_coleccionableData.status);
+        }
     }
 
     private void ClearPanels()
@@ -20,7 +32,8 @@ public class UIManager : MonoBehaviour
         HUDPanel.SetActive(false);
         PausePanel.SetActive(false);
         Configpanel.SetActive(false);
-        //seleccionador.SetActive(false);
+        ActivoPanel.SetActive(false);
+        DesactivoPanel.SetActive(false);
     }
 
     public void ShowHud()
@@ -39,5 +52,19 @@ public class UIManager : MonoBehaviour
     {
         ClearPanels();
         Configpanel.SetActive(true);
+    }
+
+    public void showColeccion()
+    {
+        if (_coleccionableData.status == true)
+        {
+            ClearPanels();
+            ActivoPanel.SetActive(true);
+        }
+        else
+        {
+            ClearPanels();
+            DesactivoPanel.SetActive(true);
+        }
     }
 }

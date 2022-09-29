@@ -417,6 +417,8 @@ MonoBehaviour:
   cantidad: 10
   recursoUP: {fileID: 0}
   Duracion: 550
+  invensible: 0
+  tiempo: 5
 --- !u!23 &5085599134106377937
 MeshRenderer:
   m_ObjectHideFlags: 0

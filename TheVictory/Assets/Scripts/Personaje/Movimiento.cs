@@ -4,6 +4,7 @@ using UnityEngine.AI;
  
 public class Movimiento : MonoBehaviour
 {
+    
     Camera cam;
     NavMeshAgent myAgent;
     public LayerMask ground;

@@ -30,7 +30,7 @@ public class Coleccionable : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" || other.tag == "Trabajador" || other.tag == "Luchador")
+        if (other.tag == "Player" || other.tag == "Trabajador" || other.tag == "Luchador" || other.tag == ("Guerrero"))
         {
             //Debug.Log("Coleccionable");
             _coleccionableData.status = true;

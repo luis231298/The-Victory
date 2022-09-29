@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Scenes/Configuraci\xF3n.unity"
     guid: dce624b860289774ea13211417e69036
+  - enabled: 1
+    path: Assets/Scenes/Nivel2.unity
+    guid: 17270c62b2fa0144c9b19f02be0b11b1
   m_configObjects: {}

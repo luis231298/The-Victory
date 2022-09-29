@@ -65,7 +65,7 @@ PrefabInstance:
     - target: {fileID: 851396437842871579, guid: a3be7cdbe61cbfa47a1862ffc8f7a897,
         type: 3}
       propertyPath: m_Name
-      value: Guerrero
+      value: Guerrero Variant
       objectReference: {fileID: 0}
     - target: {fileID: 851396437842871579, guid: a3be7cdbe61cbfa47a1862ffc8f7a897,
         type: 3}
@@ -77,5 +77,55 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Guerrero
       objectReference: {fileID: 0}
+    - target: {fileID: 851396437842871582, guid: a3be7cdbe61cbfa47a1862ffc8f7a897,
+        type: 3}
+      propertyPath: m_Speed
+      value: 280.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 851396437842871582, guid: a3be7cdbe61cbfa47a1862ffc8f7a897,
+        type: 3}
+      propertyPath: m_Acceleration
+      value: 102.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 851396437842871582, guid: a3be7cdbe61cbfa47a1862ffc8f7a897,
+        type: 3}
+      propertyPath: m_AngularSpeed
+      value: 306.9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3be7cdbe61cbfa47a1862ffc8f7a897, type: 3}
+--- !u!1 &8312783356778283895 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 851396437842871579, guid: a3be7cdbe61cbfa47a1862ffc8f7a897,
+    type: 3}
+  m_PrefabInstance: {fileID: 8686375948622546540}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &-675106727341605027
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8312783356778283895}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 2, z: 3}
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &1581660993281586057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8312783356778283895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98c16a5825a34574c888df73609606a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cantidad: 2.5
+  Duracion: 450
+  invensible: 0
+  tiempo: 3

@@ -1,38 +1,45 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class ColisionMineral : MonoBehaviour
-{ 
+public class Enemigo : MonoBehaviour
+{
     public int cantidad = 10;
-    public RecolecciónMineral recursoUP;
     public int Duracion; 
     
     //Duración recursos
     public bool invensible;
     public  float tiempo;
-    
-    private void OnTriggerEnter(Collider other)
+
+    public NavMeshAgent _meshAgent;
+
+    //public CapsuleCollider _capsuleCollider; 
+    //public Transform objetivo;
+    // Start is called before the first frame update
+    void Start()
     {
-        if (other.tag == "Trabajador")
-        {
-            recursoUP.SumaPuntos(cantidad);
-            //other.GetComponent<RecolecciónMineral>().SumaPuntos(cantidad);
-            //Debug.Log("adentro");
-        }
+        
     }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Trabajador")
+        if (other.tag == "Guerrero" || other.tag == "Player")
         {
-            recursoUP.SumaPuntos(cantidad);
             restaVida();
-            //other.GetComponent<RecolecciónMineral>().SumaPuntos(cantidad);
-            //Debug.Log("adentro2");
+            _meshAgent.SetDestination(other.transform.position);
         }
+        
     }
+
+    
 
     private void restaVida()
     {
@@ -50,7 +57,7 @@ public class ColisionMineral : MonoBehaviour
             Destroy(gameObject);
         } 
     }
-
+    
     IEnumerator Espera()
     {
         invensible = true;

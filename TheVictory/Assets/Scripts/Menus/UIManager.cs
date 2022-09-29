@@ -10,6 +10,7 @@ public class UIManager : MonoBehaviour
     public GameObject Configpanel;
     public GameObject ActivoPanel;
     public GameObject DesactivoPanel;
+    public GameObject FinalNVL;
     
     public ColeccionableData _coleccionableData; 
     public const string pathData = "Data/Coleccion";
@@ -34,6 +35,7 @@ public class UIManager : MonoBehaviour
         Configpanel.SetActive(false);
         ActivoPanel.SetActive(false);
         DesactivoPanel.SetActive(false);
+        FinalNVL.SetActive(false);
     }
 
     public void ShowHud()
@@ -52,6 +54,12 @@ public class UIManager : MonoBehaviour
     {
         ClearPanels();
         Configpanel.SetActive(true);
+    }
+
+    public void Final()
+    {
+        ClearPanels();
+        FinalNVL.SetActive(true);
     }
 
     public void showColeccion()

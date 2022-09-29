@@ -8,10 +8,11 @@ public class MovimientoManager : MonoBehaviour
     private NavMeshAgent miAgente;
     private Ray miRayo;
     private RaycastHit infomacionDelRayo;
-    
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
         miAgente = this.GetComponent<NavMeshAgent>();
     }
 
@@ -23,8 +24,10 @@ public class MovimientoManager : MonoBehaviour
             miRayo = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(miRayo, out infomacionDelRayo, 100, capaTransitable))
             {
+                animator.SetInteger("Bool", 0);
                 miAgente.SetDestination(infomacionDelRayo.point);
             }
         }
+        animator.SetInteger("Bool", 1);
     }
 }

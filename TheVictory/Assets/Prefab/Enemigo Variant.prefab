@@ -101,6 +101,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2274633271242824286, guid: 259f321d2f717024980a09ca4e76b31c,
+        type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2274633271242824286, guid: 259f321d2f717024980a09ca4e76b31c,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.24
+      objectReference: {fileID: 0}
     - target: {fileID: 2666799663237763808, guid: 259f321d2f717024980a09ca4e76b31c,
         type: 3}
       propertyPath: m_Layer
@@ -468,8 +478,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 926ae7d700781cb438dc2d0b8daf23d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cantidad: 10
-  Duracion: 550
+  cantidad: 25
+  Duracion: 50
   invensible: 0
   tiempo: 3
   _meshAgent: {fileID: 7095173805431876558}

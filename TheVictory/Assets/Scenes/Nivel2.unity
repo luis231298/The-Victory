@@ -7181,11 +7181,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1161571587}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa48bf752582f4743b1e1bf6ef626d29, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c2940c35d60a514089de99685c17abb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _inicio: {fileID: 0}
+  enemigos: []
+  escena: Fin
 --- !u!1 &1167292040
 GameObject:
   m_ObjectHideFlags: 0

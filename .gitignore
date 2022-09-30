@@ -14,6 +14,8 @@ TheVictory/[Aa]ssets/[Pp]olybrush Data
 TheVictory/[Aa]ssets/[Tt]extMesh Pro
 TheVictory/[Aa]ssets/[Cc]onifers [BOTD]
 TheVictory/[Aa]ssets/[Kk]evin Iglesias
+TheVictory/[Aa]ssets/8-Bit RPG Adventure Music Pack I by Francesco Fabrizio
+TheVictory/[Aa]ssets/Sound Effects
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta

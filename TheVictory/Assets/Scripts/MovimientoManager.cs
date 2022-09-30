@@ -4,6 +4,7 @@ using UnityEngine.AI;
 
 public class MovimientoManager : MonoBehaviour
 {
+    public AudioSource _audio;
     public LayerMask capaTransitable;
     private NavMeshAgent miAgente;
     private Ray miRayo;
@@ -27,6 +28,7 @@ public class MovimientoManager : MonoBehaviour
                 //animator.SetInteger("Bool", 0);
                 animator.SetTrigger("Caminar");
                 miAgente.SetDestination(infomacionDelRayo.point);
+                _audio.Play();
             }
         }
         //animator.SetInteger("Bool", 1);

@@ -24,10 +24,12 @@ public class MovimientoManager : MonoBehaviour
             miRayo = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(miRayo, out infomacionDelRayo, 100, capaTransitable))
             {
-                animator.SetInteger("Bool", 0);
+                //animator.SetInteger("Bool", 0);
+                animator.SetTrigger("Caminar");
                 miAgente.SetDestination(infomacionDelRayo.point);
             }
         }
-        animator.SetInteger("Bool", 1);
+        //animator.SetInteger("Bool", 1);
+        
     }
 }

@@ -10,8 +10,7 @@ public class Guerrero : MonoBehaviour
     //Duración recursos
     public bool invensible;
     public  float tiempo;
-    
-    
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +27,7 @@ public class Guerrero : MonoBehaviour
     {
         if (other.tag == "Enemigo" || other.tag == "Player" )
         {
-            
+            animator.SetTrigger("Caminar");
             restaVida();
         }
     }

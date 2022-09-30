@@ -14,7 +14,7 @@ public class Enemigo : MonoBehaviour
     public  float tiempo;
 
     public NavMeshAgent _meshAgent;
-
+    public Animator animator;
     //public CapsuleCollider _capsuleCollider; 
     //public Transform objetivo;
     // Start is called before the first frame update
@@ -33,6 +33,7 @@ public class Enemigo : MonoBehaviour
     {
         if (other.tag == "Guerrero" || other.tag == "Player")
         {
+            animator.SetTrigger("Atacando");
             restaVida();
             _meshAgent.SetDestination(other.transform.position);
         }
